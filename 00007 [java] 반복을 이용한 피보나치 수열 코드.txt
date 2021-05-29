@@ -1,0 +1,25 @@
+package fibonacci_numbers;
+
+public class FibonacciNumbers {
+
+	
+	// 반복을 이용한 피보나치 수열
+	public int Fibonacci_repeat(int num) {
+
+		if(num<2)
+			return num;
+		else {
+			int tmp,current=1,last=0;
+			for(int i=2;i<=num;i++)
+			{
+				tmp = current;
+				current += last;
+				last = tmp;
+			}
+			return current;
+		}
+	}
+	
+
+}
+
